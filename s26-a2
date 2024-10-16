@@ -1,0 +1,20 @@
+RabbitMQ
+O RabbitMQ é uma ferramenta poderosa para comunicar diferentes partes de um sistema, como um e-commerce. Ele funciona como um correio que envia e recebe mensagens entre produtores (quem envia a mensagem) e consumidores (quem recebe a mensagem).
+
+Como o RabbitMQ funciona no e-commerce:
+
+Pedidos: Quando um cliente faz um pedido, uma mensagem é enviada para o RabbitMQ.
+Rotas: Essa mensagem é encaminhada para filas específicas, cada uma responsável por um processo diferente (ex: estoque, financeiro, envio).
+Processamento: Cada fila tem um consumidor que pega a mensagem e executa a tarefa correspondente (ex: verificar estoque, emitir nota fiscal).
+Tipos de exchanges (rotas):
+
+Direct: Envia a mensagem para uma fila específica, definida pela routing key (uma espécie de endereço).
+Fanout: Envia a mensagem para todas as filas conectadas à exchange.
+Topic: Envia a mensagem para as filas que correspondem a um padrão definido na routing key, permitindo uma maior flexibilidade.
+Vantagens de usar o RabbitMQ em e-commerce:
+
+Desacoplamento: Diferentes partes do sistema podem trabalhar de forma independente.
+Escalabilidade: Pode lidar com um grande volume de mensagens.
+Confiabilidade: As mensagens são armazenadas até serem processadas.
+Flexibilidade: Permite criar diferentes fluxos de trabalho.
+O RabbitMQ é como um organizador de tarefas para um e-commerce. Ele garante que cada parte do processo seja executada na ordem correta e sem atrasos, tornando o sistema mais eficiente e confiável.

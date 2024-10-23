@@ -1,0 +1,39 @@
+apache kafka
+O que é Kafka?
+Apache Kafka é um armazenamento de dados distribuído otimizado para ingestão e processamento de dados de streaming em tempo real. Dados de transmissão são dados gerados continuamente por milhares de fontes de dados, que normalmente enviam os registros de dados simultaneamente. Uma plataforma de transmissão precisa lidar com esse fluxo constante de dados e processá-los de forma sequencial e incremental.
+
+O Kafka fornece três funções principais para seus usuários:
+
+Publicar e assinar fluxos de registros
+Armazenar fluxos de registros de forma eficaz na ordem em que os registros foram gerados
+Processar fluxos de registros em tempo real
+O Kafka é usado principalmente para criar pipelines de dados de streaming em tempo real e aplicações que se adaptam aos fluxos de dados. Ele combina mensagens, armazenamento e processamento de fluxo para permitir o armazenamento e a análise de dados históricos e em tempo real. 
+
+Para que é usado o Kafka?
+O Kafka é usado para criar pipelines de dados de streaming em tempo real e aplicações de streaming em tempo real. Um pipeline de dados processa e move dados de um sistema para outro de forma confiável, e uma aplicação de streaming é uma aplicação que consome fluxos de dados. Por exemplo, se você quiser criar um pipeline de dados que receba dados de atividades do usuário para monitorar como as pessoas usam seu site em tempo real, o Kafka seria usado para ingerir e armazenar dados de streaming enquanto fornece leituras para os aplicações que alimentam o pipeline de dados. O Kafka também é frequentemente usado como uma solução de agente de mensagens, que é uma plataforma que processa e medeia a comunicação entre duas aplicações.
+
+Quais são os benefícios da abordagem de Kafka?
+
+Escalonável
+
+O modelo de log particionado do Kafka permite que os dados sejam distribuídos em vários servidores, tornando-os escaláveis além do que caberia em um único servidor. 
+
+Rápido
+
+O Kafka separa os fluxos de dados para que haja uma latência muito baixa, tornando-o extremamente rápido. 
+
+Resiliente
+
+As partições são distribuídas e replicadas em vários servidores, e os dados são todos gravados em disco. Isso ajuda a proteger contra falhas no servidor, tornando os dados muito tolerantes a falhas e duráveis. 
+
+Como a arquitetura de Kafka integra diferentes modelos?
+
+O Kafka corrige os dois modelos diferentes publicando registros sobre tópicos diferentes. Cada tópico tem um log particionado, que é um log de confirmação estruturado que acompanha todos os registros em ordem e anexa novos em tempo real. Essas partições são distribuídas e replicadas em vários servidores, permitindo alta escalabilidade, tolerância a falhas e paralelismo. Cada consumidor recebe uma partição no tópico, que permite vários assinantes enquanto mantém a ordem dos dados. Ao combinar esses modelos de mensagens, o Kafka oferece os benefícios de ambos. O Kafka também atua como um sistema de armazenamento muito escalável e tolerante a falhas, gravando e replicando todos os dados em disco. Por padrão, o Kafka mantém os dados armazenados no disco até ficarem sem espaço, mas o usuário também pode definir um limite de retenção. O Kafka possui quatro APIs:
+
+API do produtor: usada para publicar um fluxo de registros em um tópico do Kafka.
+
+API do consumidor: usada para assinar tópicos e processar seus fluxos de registros.
+
+API de fluxos: permite que as aplicações se comportem como processadores de fluxo, que captam um fluxo de entrada do(s) tópico(s) e o transformam em um fluxo de saída que vai para diferentes tópicos de saída.
+
+API do conector: permite que os usuários automatizem perfeitamente a adição de outra aplicação ou sistema de dados aos tópicos atuais do Kafka 
